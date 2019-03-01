@@ -11,5 +11,12 @@
 
   <body>
     <%= yield %>
+    <hr>
+    <%= Rails.env %>
+    <ul>
+      <% ENV.each do |k,v| %>
+        <li><%= k %>: <%= v %></li>
+      <% end %>
+    </ul>
   </body>
 </html>
